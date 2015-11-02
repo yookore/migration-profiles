@@ -91,24 +91,21 @@ object Config {
     
     case "beta" =>
       println("===Running in beta mode===")
-      //val driverPort = 7077
-      //val driverHost = "192.168.121.160"
       conf.setAppName("Legacy User Profiles Migration")
-      //conf.setMaster("yarn-client")
-      //conf.setMaster("local[*]")
-      conf.setMaster("yarn-cluster")
       conf.set("spark.logConf", "true")
-      conf.set("spark.driver.memory", "3g")
-      conf.set("spark.executor.memory", "8g")
-      conf.set("spark.executor.cores", "12")
-      conf.set("spark.dynamicAllocation.enabled", "true")
       conf.set("spark.akka.logLifecycleEvents", "true")
+      // yarn-client config
+      conf.setMaster("yarn-client")
+      conf.set("spark.executor.memory", "8g")
+      conf.set("spark.executor.cores", "3")
+      conf.set("spark.executor.instances", "13")
+      //yarn-cluster config
+      //conf.setMaster("yarn-cluster")
+      //conf.set("spark.driver.memory", "3g")
+      //conf.set("spark.executor.memory", "8g")
+      //conf.set("spark.executor.cores", "12")
+      //conf.set("spark.dynamicAllocation.enabled", "true")
       //conf.set("spark.driver.allowMultipleContexts", "true")
-      // Uses all cores by default
-      //conf.set("spark.executor.cores", "4")
-      //conf.set("spark.driver.maxResultSize", "0")
-      //conf.set("spark.driver.memory", "2g")
-      //conf.set("spark.executor.memory", "6g")
       conf.set("spark.cassandra.connection.host", "192.168.121.174")
       conf.set("spark.cassandra.auth.username", "cassandra")
       conf.set("spark.cassandra.auth.password", "Gonzo@7072")
