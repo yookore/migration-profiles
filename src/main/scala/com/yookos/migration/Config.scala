@@ -95,13 +95,13 @@ object Config {
       val driverHost = "192.168.121.160"
       conf.setAppName("Legacy User Profiles Migration")
       conf.setMaster("local[*]")
-      conf.set("spark.driver.port", driverPort.toString)
-      conf.set("spark.driver.host", driverHost)
+      //conf.set("spark.driver.port", driverPort.toString)
+      //conf.set("spark.driver.host", driverHost)
       conf.set("spark.logConf", "true")
       conf.set("spark.akka.logLifecycleEvents", "true")
-      //conf.set("spark.executor.memory", "12g")
-      //conf.set("spark.executor.cores", "8")
-      //conf.set("spark.executor.instances", "13")
+      conf.set("spark.executor.memory", "12g")
+      conf.set("spark.executor.cores", "8")
+      conf.set("spark.executor.instances", "13")
       // yarn-client config
       //conf.setMaster("yarn-client")
       //conf.set("spark.yarn.am.cores", "2")
