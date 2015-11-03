@@ -106,7 +106,8 @@ object Config {
       conf.set("spark.executor.memory", "8g")
       conf.set("spark.executor.cores", "5")
       conf.set("spark.executor.instances", "13")
-      //conf.set("spark.executor.port", "8050")
+      //conf.set("spark.driver.port", "8032")
+      //conf.set("spark.driver.host", "192.168.121.160")
       //yarn-cluster config
       //conf.setMaster("yarn-cluster")
       //conf.set("spark.driver.memory", "3g")
