@@ -97,6 +97,9 @@ object Config {
       conf.setMaster("local[*]")
       conf.set("spark.logConf", "true")
       conf.set("spark.akka.logLifecycleEvents", "true")
+      conf.set("spark.executor.memory", "8g")
+      conf.set("spark.executor.cores", "5")
+      conf.set("spark.executor.instances", "13")
       // yarn-client config
       //conf.setMaster("yarn-client")
       //conf.set("spark.yarn.am.cores", "2")
