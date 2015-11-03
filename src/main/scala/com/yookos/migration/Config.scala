@@ -94,8 +94,8 @@ object Config {
       val driverPort = 7077
       val driverHost = "192.168.121.221"
       conf.setAppName("Legacy User Profiles Migration")
-      //conf.setMaster("local[*]")
-      conf.setMaster("spark://192.168.121.221:7077")
+      conf.setMaster("local[*]")
+      //conf.setMaster("spark://192.168.121.221:7077")
       //conf.set("spark.driver.port", driverPort.toString)
       //conf.set("spark.driver.host", driverHost)
       conf.set("spark.logConf", "true")
