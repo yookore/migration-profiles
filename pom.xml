@@ -42,11 +42,11 @@
       <artifactId>spark-yarn_2.10</artifactId>
       <version>1.5.1</version>
     </dependency>
-    <!--dependency>
+    <dependency>
       <groupId>org.apache.spark</groupId>
       <artifactId>spark-streaming_2.10</artifactId>
       <version>1.5.1</version>
-    </dependency-->
+    </dependency>
     <dependency>
       <groupId>com.datastax.spark</groupId>
       <artifactId>spark-cassandra-connector_${scala.compat.version}</artifactId>
