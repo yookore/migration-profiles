@@ -7,8 +7,8 @@ import akka.util.Timeout
 
 import org.apache.spark._
 import org.apache.spark.sql._
-import org.apache.spark.streaming.{ Milliseconds, Seconds, StreamingContext, Time }
-import org.apache.spark.streaming.receiver._
+//import org.apache.spark.streaming.{ Milliseconds, Seconds, StreamingContext, Time }
+//import org.apache.spark.streaming.receiver._
 
 import com.datastax.spark.connector._
 import com.datastax.spark.connector.rdd._
@@ -37,8 +37,6 @@ object UpdateProfiles extends App {
   val mode = Config.mode
   Config.setSparkConf(mode, conf)
   val cache = Config.redisClient(mode)
-  //val ssc = new StreamingContext(conf, Seconds(2))
-  //val sc = ssc.sparkContext
   val sc = new SparkContext(conf)
   val sqlContext = new org.apache.spark.sql.SQLContext(sc)
 
